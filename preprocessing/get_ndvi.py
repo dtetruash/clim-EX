@@ -1,3 +1,5 @@
+"""NOTE: https://github.com/esowc/ml_drought for the `src` code"""
+
 from pathlib import Path
 import shutil
 

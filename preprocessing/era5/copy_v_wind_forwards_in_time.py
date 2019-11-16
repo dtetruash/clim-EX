@@ -1,6 +1,8 @@
-from src.preprocess import ERA5MonthlyMeanPreprocessor
+"""NOTE: https://github.com/esowc/ml_drought for the `src` code"""
+
 from pathlib import pathlib
 
+from src.preprocess import ERA5MonthlyMeanPreprocessor
 
 data_dir = Path('/soge-home/projects/crop_yield/ml_drought/data/')
 hack_dir = Path('/soge-home/projects/crop_yield/hackathon')

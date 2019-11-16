@@ -1,6 +1,8 @@
 """
 regrid the NDVI data to the same spatial grid
 as the ERA5 reanalysis data
+
+NOTE: https://github.com/esowc/ml_drought for the `src` code
 """
 from src.preprocess import CHIRPSPreprocessor
 from pathlib import Path
