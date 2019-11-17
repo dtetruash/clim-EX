@@ -1,5 +1,6 @@
-# Clim-AX
-## Making climate data sexy again.
+<p align="center">
+  <img src="https://github.com/davzzar/clim-AX/raw/master/turnoff/public/images/logos/readme-banner.png" alt="Clim-AX Logo Banner" width="738">
+</p>
 
 Clim-AX (Climate Animation eXperience) is a tool for visualising and viewing past meteorological data which will help solve African droughts. This tool bridges the gap between the layman and scientific meteorological experts making the viewing of this data enjoyable and aesthetically pleasing.
 
