@@ -20,7 +20,7 @@ code {
 }
 
 .App {
-  /*text-align: center;*/
+  text-align: center;
 }
 
 .slider {
@@ -46,6 +46,7 @@ img {
   right: 0;
 }
 
-image.river {
-  : color-burn;
+.imagecontainer {
+  margin: 0 auto;
+  display: inline-block;
 }

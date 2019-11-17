@@ -4,13 +4,13 @@ import Moment from 'moment';
 import Slider from 'rc-slider';
 
 const startingDate = Moment("1996-1-1");
-const amountOfImages = 3;
+const amountOfImages = 5;
 const autoplayTimeout = 50;
 
-const filesets = [
-    {prefix: "topo_", blendmode: "normal"},
-    {prefix: "topo_", blendmode: "normal"},
-    {prefix: "river", blendmode: "screen"},
+const imageindex = [
+    {prefix: "tempplots/temp", blendmode: "normal"},
+    {image: "/images/heightmap-akatopo.png", blendmode: "normal"},
+    {prefix: "riverplots/river", blendmode: "screen", opacity: 0.8},
 ];
 
 class App extends React.Component {
@@ -30,7 +30,7 @@ class App extends React.Component {
                 <div className="slider">
                     <Slider onChange={this.scrollImage.bind(this)} min={1} max={amountOfImages} value={this.state.imageNumber}/>
                 </div>
-                <div style={{height: "100%"}} onClick={this.toggleAutoplay.bind(this)} dangerouslySetInnerHTML={{__html: this.renderSvgAsText()}} />
+                <div className="imagecontainer" onClick={this.toggleAutoplay.bind(this)} dangerouslySetInnerHTML={{__html: this.renderSvgAsText()}} />
 
                 <span className="metadata">
                     {Moment(startingDate).add(this.state.imageNumber - 1, "day").format("DD MMM YYYY")}
@@ -40,11 +40,15 @@ class App extends React.Component {
     }
 
     renderSvgAsText() {
-        let output = "<svg style='width: 100%; height: 100%'>";
+        let output = "<svg style='width: 780px; height: 800px'>";
 
-        filesets.forEach((fileset) =>
-            output += `<image href="/images/${fileset.prefix}${this.prefixedImgNr()}.png" style="mix-blend-mode: ${fileset.blendmode}" />`
-        );
+        imageindex.forEach((imagething) => {
+            if(imagething.hasOwnProperty("image")) {
+                output += `<image href="${imagething.image}" style="mix-blend-mode: ${imagething.blendmode}; opacity: ${imagething.opacity || 1}" />`;
+            } else {
+                output += `<image href="/images/${imagething.prefix}${this.prefixedImgNr()}.png" style="mix-blend-mode: ${imagething.blendmode}; opacity: ${imagething.opacity || 1}" " />`
+            }
+        });
         output += "</svg>";
         return output;
     }
