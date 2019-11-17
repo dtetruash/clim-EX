@@ -49,6 +49,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <div className="logo">
+            <img src="/images/logos/readme-banner.png"></img> 
+        </div>
         <div className="slider">
           <Slider
             onChange={this.scrollImage.bind(this)}

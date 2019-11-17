@@ -69,3 +69,20 @@ img {
   opacity: 1;
   transition: opacity 0.3s;
 }
+
+.logo {
+  position: absolute;
+  top: 3em;
+  left: 3em;
+  opacity: 0.3;
+  padding: 20px;
+}
+
+.logo img {
+  width: 350px;
+}
+
+.logo:hover {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
