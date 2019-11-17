@@ -22,6 +22,12 @@ const imageindex = [
     togglevar: "enabledTempsAno"
   },
   {
+    prefix: "/images/ndviplots/ndvi",
+    blendmode: "normal",
+    opacity: 1,
+    togglevar: "enabledVeg"
+  },
+  {
     image: "/images/heightplot/topo_only_5.png",
     blendmode: "overlay",
     opacity: 1,
@@ -40,15 +46,9 @@ const imageindex = [
   {
     prefix: "/images/rainplots/rain",
     blendmode: "normal",
-    opacity: 1,
+    opacity: 0.7,
     togglevar: "enabledRain"
-  },
-  {
-    prefix: "/images/ndviplots/ndvi",
-    blendmode: "normal",
-    opacity: 1,
-    togglevar: "enabledVeg"
-  },
+  }
 ];
 
 class App extends React.Component {
