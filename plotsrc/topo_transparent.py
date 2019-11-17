@@ -30,12 +30,13 @@ topo["nlon"] = topo.longitude
 topo = topo.rename({"nlat": "lat", "nlon": "lon"})
 
 # chop africa
-lonmin = -31.6
-lonmax = 51.8
-latmin = -35.8
-latmax = 37.2
+# lonmin = -31.6
+# lonmax = 51.8
+# latmin = -35.8
+# latmax = 37.2
 
-topo = topo.sel(lat=slice(latmin, latmax), lon=slice(lonmin, lonmax))
+# topo = topo.sel(lat=slice(latmin, latmax), lon=slice(lonmin, lonmax))
+topo = topo.sel(lat=slice(-35, 37), lon=slice(-31, 51))
 
 elev = np.array(topo.variables["elevation"])
 elevlat = np.array(topo.variables["lat"])
