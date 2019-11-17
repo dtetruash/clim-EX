@@ -12,7 +12,7 @@ Clim-AX can dynamically scroll through the time, enabling the user to understand
 
 ### Data
 
-Clim-AX uses ERA5 Reanalysis Product data taken from the [Copernicus Data Store](https://cds.climate.copernicus.eu/), river discharge from the [Global Flood Awareness System (GLOFAS)](https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-glofas-historical?tab=overview) and vegetation health from [AWHRR (produced by NOAA)](https://climatedataguide.ucar.edu/climate-data/ndvi-normalized-difference-vegetation-index-noaa-avhrr). All data is provided in the NetCDF data format.
+Clim-AX uses ERA5 Reanalysis Product data taken from the [Copernicus Data Store](https://cds.climate.copernicus.eu/), river discharge from the [Global Flood Awareness System (GLOFAS)](https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-glofas-historical?tab=overview) and vegetation health from [AVHRR (produced by NOAA)](https://climatedataguide.ucar.edu/climate-data/ndvi-normalized-difference-vegetation-index-noaa-avhrr). All data is provided in the NetCDF data format.
 
 ### Under the hood
 
