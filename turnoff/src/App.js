@@ -16,6 +16,12 @@ const imageindex = [
     togglevar: "enabledTemps"
   },
   {
+    prefix: "/images/anoplots/ano",
+    blendmode: "normal",
+    opacity: 0.8,
+    togglevar: "enabledTempsAno"
+  },
+  {
     image: "/images/heightplot/topo_only_5.png",
     blendmode: "overlay",
     opacity: 1,
@@ -38,10 +44,10 @@ const imageindex = [
     togglevar: "enabledRain"
   },
   {
-    prefix: "/images/skyfall/tp_0",
+    prefix: "/images/ndviplots/ndvi",
     blendmode: "normal",
     opacity: 1,
-    togglevar: "enabledRain"
+    togglevar: "enabledVeg"
   },
 
 ];
@@ -56,6 +62,7 @@ class App extends React.Component {
       enabledTemps: true,
       enabledRivers: true,
       enabledRain: true,
+      enabledVeg: true
     };
     setInterval(this.handleAutoplayTimeout.bind(this), autoplayTimeout);
     this.preloadshit();
@@ -113,11 +120,27 @@ class App extends React.Component {
           </ToggleButton>
           &nbsp;
           <ToggleButton
+            value="check"
+            selected={this.state.enabledTempsAno}
+            onChange={this.toggle("enabledTempsAno")}
+          >
+            Temperature Anomoly
+          </ToggleButton>
+          &nbsp;
+          <ToggleButton
               value="check"
               selected={this.state.enabledRain}
               onChange={this.toggle("enabledRain")}
           >
             Rain
+          </ToggleButton>
+        &nbsp;
+          <ToggleButton
+              value="check"
+              selected={this.state.enabledVeg}
+              onChange={this.toggle("enabledVeg")}
+          >
+            Vegetation
           </ToggleButton>
         </div>
 
