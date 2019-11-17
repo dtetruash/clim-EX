@@ -5,7 +5,7 @@ import Slider from "rc-slider";
 import ToggleButton from "@material-ui/lab/ToggleButton";
 
 const startingDate = Moment("2018-1-1");
-const amountOfImages = 100;
+const amountOfImages = 138;
 const autoplayTimeout = 100;
 
 const imageindex = [
