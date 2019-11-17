@@ -1,7 +1,7 @@
 # Clim-AX
 ## Making climate data sexy again.
 
-Clim-AX (Climate Aminamtion Experience) is a tool for visualising and viewing past meteorological data which will help solve African droughts. This tool bridges the gap between the layman and scientific meteorological experts making the viewing of this data enjoyable and aesthetically pleasing.
+Clim-AX (Climate Animation eXperience) is a tool for visualising and viewing past meteorological data which will help solve African droughts. This tool bridges the gap between the layman and scientific meteorological experts making the viewing of this data enjoyable and aesthetically pleasing.
 
 ### Features
 
@@ -10,11 +10,13 @@ Clim-AX is capable of displaying temperature and temperature anomaly, topography
 Clim-AX can dynamically scroll through the temporal axis, enabling the user to glimpse the past and
 
 Clim-AX uses ERA5 Reanalysis Product data taken from the [Copernicus Data Store](https://cds.climate.copernicus.eu/).
+
 ### Under the hood
-- Pregenerates image plots via MatPlotLib for each time step and each data layer from the NetCDF data
-- Send the data to the React Frontend
+
+- Pre-generates image plots via MatPlotLib for each time step and each data layer from the NetCDF data
+- Send the data to the React frontend
 - Stacks the layers via the SVG format to achieve hacky data layer blending
-- Auto interpolated between images for a smooth and pleaseing viewign experience
+- Auto interpolated between images for a smooth and pleasing viewing experience
 
 ### Screenshots
 
