@@ -4,9 +4,9 @@ import Moment from "moment";
 import Slider from "rc-slider";
 import ToggleButton from "@material-ui/lab/ToggleButton";
 
-const startingDate = Moment("1996-1-1");
+const startingDate = Moment("2018-1-1");
 const amountOfImages = 366;
-const autoplayTimeout = 300;
+const autoplayTimeout = 100;
 
 const imageindex = [
   {
@@ -49,7 +49,6 @@ const imageindex = [
     opacity: 1,
     togglevar: "enabledVeg"
   },
-
 ];
 
 class App extends React.Component {
@@ -65,7 +64,6 @@ class App extends React.Component {
       enabledVeg: true
     };
     setInterval(this.handleAutoplayTimeout.bind(this), autoplayTimeout);
-    this.preloadshit();
   }
 
   render() {
@@ -91,8 +89,9 @@ class App extends React.Component {
         <div
           className="imagecontainer"
           onClick={this.toggleAutoplay.bind(this)}
-          dangerouslySetInnerHTML={{ __html: this.renderSvgAsText() }}
-        />
+        >
+          <svg style={{width: "780px", height: "800px"}} dangerouslySetInnerHTML={{ __html: this.renderSvgAsText(this.state.imageNumber) }} />
+        </div>
 
         <div className="button-controls">
           <ToggleButton
@@ -153,32 +152,14 @@ class App extends React.Component {
     );
   }
 
-  preloadshit() {
-    const everyimage = [];
-    imageindex.forEach(imagething => {
-      if (imagething.hasOwnProperty("image")) {
-        let img = new Image();
-        img.src = imagething.image;
-        everyimage.push(img);
-      } else {
-        for(let i = 0; i <= amountOfImages; i++) {
-          let img = new Image();
-          img.src = `${imagething.prefix}${this.prefixedImgNr(i)}.png`
-          everyimage.push(img);
-        }
-      }
-    })
-  }
-
   toggle(vari) {
     return () => {
       this.setState({ [vari]: !this.state[vari] });
     };
   }
 
-  renderSvgAsText() {
-    let output = "<svg style='width: 780px; height: 800px'>";
-
+  renderSvgAsText(n) {
+    let output = "";
     imageindex.forEach(imagething => {
       if (
         imagething.hasOwnProperty("togglevar") &&
@@ -189,10 +170,9 @@ class App extends React.Component {
       if (imagething.hasOwnProperty("image")) {
         output += `<image href="${imagething.image}" style="mix-blend-mode: ${imagething.blendmode}; opacity: ${imagething.opacity || 1}" />`;
       } else {
-        output += `<image href="${imagething.prefix}${this.prefixedImgNr()}.png" style="mix-blend-mode: ${imagething.blendmode}; opacity: ${imagething.opacity || 1}" " />`;
+        output += `<image href="${imagething.prefix}${this.prefixedImgNr(n)}.png" style="mix-blend-mode: ${imagething.blendmode}; opacity: ${imagething.opacity || 1}" " />`;
       }
     });
-    output += "</svg>";
     return output;
   }
 
@@ -203,23 +183,39 @@ class App extends React.Component {
   }
 
   handleAutoplayTimeout() {
-    if (this.state.autoplayEnabled && this.state.imageNumber < amountOfImages)
-      this.setState(prevState => {
-        return {
-          imageNumber: prevState.imageNumber + 1,
-          autoplayEnabled: prevState.imageNumber + 1 < amountOfImages
-        };
-      });
+    if (this.state.autoplayEnabled && this.state.imageNumber < amountOfImages) {
+      this.setCurrentImageThing(this.state.imageNumber+1);
+    }
   }
 
-  scrollImage(newImageNumber) {
-    this.setState({
-      imageNumber: newImageNumber
+  setCurrentImageThing(n) {
+    let loadedImages = 0;
+    let loadCallback = () => {
+      loadedImages++;
+      if(loadedImages === imageindex.length-1) {
+        this.setState({
+          imageNumber: n,
+          autoplayEnabled: n < amountOfImages
+        });
+      }
+    };
+
+    imageindex.forEach(imagething => {
+      const primaryImage = new Image();
+      primaryImage.onload = loadCallback;
+      if (imagething.hasOwnProperty("image")) {
+        primaryImage.src = imagething.image;
+      } else {
+        primaryImage.src += imagething.prefix + this.prefixedImgNr(n) + ".png"
+      }
     });
   }
 
+  scrollImage(newImageNumber) {
+    this.setCurrentImageThing(newImageNumber)
+  }
+
   prefixedImgNr(n) {
-    n = n || this.state.imageNumber;
     return ("" + n).padStart(4, "0");
   }
 }

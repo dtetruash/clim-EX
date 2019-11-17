@@ -27,6 +27,6 @@ Clim-AX uses ERA5 Reanalysis Product data taken from the [Copernicus Data Store]
 
 - [David Simon Tetruashvli](https://github.com/davzzar)
 - [Sijmen Huizenga](https://github.com/SijmenHuizenga)
-- [Milan Koewer](https://github.com/milankl)
+- [Milan Kloewer](https://github.com/milankl)
 - [Tommy Lees](https://github.com/tommylees112)
 
