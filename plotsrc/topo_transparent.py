@@ -29,7 +29,7 @@ topo["nlat"] = topo.latitude
 topo["nlon"] = topo.longitude
 topo = topo.rename({"nlat": "lat", "nlon": "lon"})
 
-# chop east africa
+# chop africa
 lonmin = -31.6
 lonmax = 51.8
 latmin = -35.8
