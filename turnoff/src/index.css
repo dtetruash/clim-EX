@@ -53,4 +53,13 @@ img {
 
 .aaaah {
   opacity: 0.3;
+  transition: opacity 0.3s;
+  padding: 25px;
+  margin-top: -25px;
+}
+
+.aaaah:hover {
+  opacity: 1;
+  transition: opacity 0.3s;
+
 }
