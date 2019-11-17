@@ -24,14 +24,17 @@ gdf = gpd.read_file(in_path)
 ## plot
 fig, ax = plt.subplots(1, 1, figsize=(7.8, 8))
 
-gdf.plot(ax=ax, facecolor='none', edgecolor='gray', alpha=0.3)
+gdf.plot(
+    ax=ax, facecolor='none',
+    edgecolor='white', alpha=0.3
+)
 
 ax.set_xticks([])
 ax.set_yticks([])
 
 # lat=slice(-35, 37), lon=slice(-31, 51)
-ax.set_xlim([-31, 51.2])
-ax.set_ylim([-35, 37.5])
+ax.set_xlim([-31.5, 51.2])
+ax.set_ylim([-35, 38])
 
 # lat.max=36.9375
 # lat.min=-34.9375
@@ -40,7 +43,6 @@ ax.set_ylim([-35, 37.5])
 # ax.set_xlim([-30.9, 50.9])
 # ax.set_ylim([-34.9, 36.9])
 plt.axis('off')
-
 
 ax.set_aspect(1)
 plt.tight_layout()
