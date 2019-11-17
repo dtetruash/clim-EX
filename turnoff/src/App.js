@@ -190,6 +190,11 @@ class App extends React.Component {
   handleAutoplayTimeout() {
     if (this.state.autoplayEnabled && this.state.imageNumber < amountOfImages) {
       this.setCurrentImageThing(this.state.imageNumber+1);
+      if(this.state.imageNumber + 1 >= amountOfImages) {
+        this.setState({
+          autoplayEnabled: false
+        });
+      }
     }
   }
 
@@ -199,8 +204,7 @@ class App extends React.Component {
       loadedImages++;
       if(loadedImages === imageindex.length-1) {
         this.setState({
-          imageNumber: n,
-          autoplayEnabled: n < amountOfImages
+          imageNumber: n
         });
       }
     };
