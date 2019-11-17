@@ -33,32 +33,30 @@ elevlon = np.array(topo.variables["lon"])
 
 elev = np.flipud(elev)
 
-t2mi = t2m.interp(dayofyear=1,lat=elevlat,lon=elevlon)
-t2mi = np.array(t2mi.variables["t2m"])-273.15
-t2mi = np.flipud(t2mi)
+for i in range(10):
 
-maski = maskxr.interp(lat=elevlat,lon=elevlon)
-maski = np.array(maski.variables["t2m"])
-maski = np.flipud(maski)
-
-mask = np.isnan(maski)
-maska = np.ma.masked_array(np.ones_like(mask),mask=~mask)
-
-t2mi[mask] = 0.0
-elev[mask] = -2000.0
-
-## plot
-fig,ax = plt.subplots(1,1,figsize=(7.8,8))
-
-#norm = mc.Normalize(10,32)
-#lsource = mc.LightSource(90,45,hsv_max_sat=0.6)
-#rgb = lsource.shade_rgb(cm.thermal(norm(t2mi)),0.0001*elev)
-
-hand = ax.imshow(t2mi,interpolation="bilinear",vmin=10,vmax=32,cmap=cm.gray_r)
-
-ax.set_xticks([])
-ax.set_yticks([])
-
-
-plt.tight_layout()
-plt.show()
+    t2mi = t2m.interp(dayofyear=i,lat=elevlat,lon=elevlon)
+    t2mi = np.array(t2mi.variables["t2m"])-273.15
+    t2mi = np.flipud(t2mi)
+    
+    maski = maskxr.interp(lat=elevlat,lon=elevlon)
+    maski = np.array(maski.variables["t2m"])
+    maski = np.flipud(maski)
+    
+    mask = np.isnan(maski)
+    maska = np.ma.masked_array(np.ones_like(mask),mask=~mask)
+    
+    t2mi = np.ma.masked_array(t2mi,mask=mask)
+    
+    ## plot
+    fig,ax = plt.subplots(1,1,figsize=(7.8,8))
+    
+    ax.imshow(t2mi,interpolation="bilinear",vmin=10,vmax=32,cmap=cm.thermal)
+    
+    ax.set_xticks([])
+    ax.set_yticks([])
+    ax.axis("off")
+    
+    plt.tight_layout()
+    plt.savefig(path+"tempplots/temp%04d.png" % (i+1),transparent=True)
+    plt.close(fig)

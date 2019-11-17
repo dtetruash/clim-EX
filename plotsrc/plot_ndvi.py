@@ -11,7 +11,7 @@ from matplotlib.colors import ListedColormap, LinearSegmentedColormap
 
 path = "/Users/milan/git/climax/"
 
-tempfile = "temp_doy.nc"
+ndvifile = "ndvi_2018.nc"
 topofile = "topo.nc"
 maskfile = "mask_africa.nc"
 
@@ -21,12 +21,13 @@ cpath = "/Users/milan/python/ScientificColourMaps5/"
 davos = LinearSegmentedColormap.from_list("test",np.loadtxt(cpath+"davos/davos.txt"))
 lajolla = LinearSegmentedColormap.from_list("test",np.loadtxt(cpath+"lajolla/lajolla.txt"))
 batlow = LinearSegmentedColormap.from_list("test",np.loadtxt(cpath+"batlow/batlow.txt"))
+bamako = LinearSegmentedColormap.from_list("test",np.loadtxt(cpath+"bamako/bamako.txt"))
 
 ## read data
 
 maskxr = xr.open_dataset(path+maskfile)
 
-t2m = xr.open_dataset(path+tempfile)
+t2m = xr.open_dataset(path+ndvifile)
 
 topo = xr.open_dataset(path+topofile)
 topo["nlat"]=topo.latitude
@@ -41,10 +42,10 @@ elevlon = np.array(topo.variables["lon"])
 
 elev = np.flipud(elev)
 
-for i in range(1,367):
+for i in range(1,366):
 
-    t2mi = t2m.interp(dayofyear=i,lat=elevlat,lon=elevlon)
-    t2mi = np.array(t2mi.variables["t2m"])-273.15
+    t2mi = t2m.isel(time=i-1).interp(lat=elevlat,lon=elevlon)
+    t2mi = np.array(t2mi.variables["ndvi"])
     t2mi = np.flipud(t2mi)
     
     maski = maskxr.interp(lat=elevlat,lon=elevlon)
@@ -61,18 +62,18 @@ for i in range(1,367):
     
     cax = fig.add_axes([0.1,0.1,0.03,0.45])
     
-    q = ax.imshow(t2mi,interpolation="bilinear",vmin=10,vmax=30,cmap=batlow)
+    q = ax.imshow(t2mi,interpolation="bilinear",vmin=0,vmax=1,cmap=bamako.reversed())
     
     cb = plt.colorbar(q,cax=cax,orientation="vertical",extend="both")
-    cb.set_ticks(np.arange(10,35,5))
+    cb.set_ticks(np.arange(0,1.2,.2))
     cb.ax.tick_params(labelsize=8,color="w",labelcolor="w")
     cb.outline.set_edgecolor("w")
-    cb.set_label("Temperature [°C]",color="w",size=8)
+    cb.set_label("Vegetation Health",color="w",size=8)
     
     ax.set_xticks([])
     ax.set_yticks([])
     ax.axis("off")
     
     plt.tight_layout()
-    plt.savefig(path+"tempplots/temp%04d.png" % i,transparent=True)
+    plt.savefig(path+"ndviplots/ndvi%04d.png" % i,transparent=True)
     plt.close(fig)
