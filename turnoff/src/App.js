@@ -177,10 +177,7 @@ class App extends React.Component {
   renderSvgAsText(n) {
     let output = "";
     imageindex.forEach(imagething => {
-      if (
-        imagething.hasOwnProperty("togglevar") &&
-        !this.state[imagething.togglevar]
-      ) {
+      if (!this.imagethingIsVisable(imagething)) {
         return;
       }
       if (imagething.hasOwnProperty("image")) {
@@ -192,6 +189,10 @@ class App extends React.Component {
     return output;
   }
 
+  imagethingIsVisable(imagething) {
+    return !imagething.hasOwnProperty("togglevar") || this.state[imagething.togglevar]
+  }
+
   toggleAutoplay() {
     this.setState({
       autoplayEnabled: !this.state.autoplayEnabled
@@ -201,24 +202,33 @@ class App extends React.Component {
   handleAutoplayTimeout() {
     if (this.state.autoplayEnabled && this.state.imageNumber < amountOfImages) {
       this.setCurrentImageThing(this.state.imageNumber+1);
+      if(this.state.imageNumber + 1 >= amountOfImages) {
+        this.setState({
+          autoplayEnabled: false
+        });
+      }
     }
   }
 
   setCurrentImageThing(n) {
     let loadedImages = 0;
+    let targetImageThing = 0;
     let loadCallback = () => {
       loadedImages++;
-      if(loadedImages === imageindex.length-1) {
+      if(loadedImages === targetImageThing) {
         this.setState({
-          imageNumber: n,
-          autoplayEnabled: n < amountOfImages
+          imageNumber: n
         });
       }
     };
 
     imageindex.forEach(imagething => {
+      if (!this.imagethingIsVisable(imagething)) {
+        return;
+      }
       const primaryImage = new Image();
       primaryImage.onload = loadCallback;
+      targetImageThing++;
       if (imagething.hasOwnProperty("image")) {
         primaryImage.src = imagething.image;
       } else {
