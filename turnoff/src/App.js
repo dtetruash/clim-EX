@@ -61,14 +61,10 @@ class App extends React.Component {
       enabledTemps: true,
       enabledRivers: true,
       enabledRain: true,
-      enabledVeg: true
+      enabledVeg: false,
+      enabledTempsAno: false
     };
     setInterval(this.handleAutoplayTimeout.bind(this), autoplayTimeout);
-    document.addEventListener('keypress', (e) => {
-      if(e.code === "Space") {
-        this.toggleAutoplay();
-      }
-    });
   }
 
   render() {
@@ -159,7 +155,22 @@ class App extends React.Component {
 
   toggle(vari) {
     return () => {
-      this.setState({ [vari]: !this.state[vari] });
+      //if (vari !== "enableTemps" && vari !== "enableTempsAno" && vari !== "enableVeg") {
+          this.setState({[vari]: !this.state[vari]})
+       /* }
+      else if(this.state[vari]) {
+          this.setState({[vari]: false})
+        }
+        else {
+         let newThing =  {
+            ebableTemps: false,
+            ebableTempsAno: false,
+            ebableVeg: false
+          }
+          newThing[vari] = true;
+
+          this.setState(newThing)
+        } */
     };
   }
 
