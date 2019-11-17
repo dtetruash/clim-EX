@@ -50,7 +50,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="logo">
-            <img src="/images/logos/readme-banner.png"></img> 
+            <img src="/images/logos/logo.png"></img> 
         </div>
         <div className="slider">
           <Slider
