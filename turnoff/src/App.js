@@ -64,6 +64,11 @@ class App extends React.Component {
       enabledVeg: true
     };
     setInterval(this.handleAutoplayTimeout.bind(this), autoplayTimeout);
+    document.addEventListener('keypress', (e) => {
+      if(e.code === "Space") {
+        this.toggleAutoplay();
+      }
+    });
   }
 
   render() {
