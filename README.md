@@ -1,18 +1,18 @@
 <p align="center">
-  <img src="https://github.com/davzzar/clim-AX/raw/master/turnoff/public/images/logos/readme-banner.png" alt="Clim-AX Logo Banner" width="738">
+  <img src="https://github.com/davzzar/clim-AX/raw/master/turnoff/public/images/logos/readme-banner.png" alt="Clim-EX Logo Banner" width="738">
 </p>
 
-Clim-AX (Climate Animation eXperience) is a tool for visualising and viewing meteorological data and weather forecasts which will help understanding African droughts. This tool bridges the gap between the layperson and scientific meteorological experts making the viewing of this data enjoyable and aesthetically pleasing.
+Clim-EX (Climate Animation eXperience) is a tool for visualising and viewing meteorological data and weather forecasts which will help understanding African droughts. This tool bridges the gap between the layperson and scientific meteorological experts making the viewing of this data enjoyable and aesthetically pleasing.
 
 ### Features
 
-Clim-AX is capable of displaying temperature and temperature anomaly, topography, precipitation, the flow of water and rivers across the surface and vegetation health. Each layer can be toggled according to the user's intent and wish.
+Clim-EX is capable of displaying temperature and temperature anomaly, topography, precipitation, the flow of water and rivers across the surface and vegetation health. Each layer can be toggled according to the user's intent and wish.
 
-Clim-AX can dynamically scroll through the time, enabling the user to understand the temporal evolution of droughts.
+Clim-EX can dynamically scroll through the time, enabling the user to understand the temporal evolution of droughts.
 
 ### Data
 
-Clim-AX uses ERA5 Reanalysis Product data taken from the [Copernicus Data Store](https://cds.climate.copernicus.eu/), river discharge from the [Global Flood Awareness System (GLOFAS)](https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-glofas-historical?tab=overview) and vegetation health from [AVHRR (produced by NOAA)](https://climatedataguide.ucar.edu/climate-data/ndvi-normalized-difference-vegetation-index-noaa-avhrr). All data is provided in the NetCDF data format.
+Clim-EX uses ERA5 Reanalysis Product data taken from the [Copernicus Data Store](https://cds.climate.copernicus.eu/), river discharge from the [Global Flood Awareness System (GLOFAS)](https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-glofas-historical?tab=overview) and vegetation health from [AVHRR (produced by NOAA)](https://climatedataguide.ucar.edu/climate-data/ndvi-normalized-difference-vegetation-index-noaa-avhrr). All data is provided in the NetCDF data format.
 
 ### Under the hood
 
