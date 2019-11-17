@@ -5,7 +5,7 @@ import Slider from "rc-slider";
 import ToggleButton from "@material-ui/lab/ToggleButton";
 
 const startingDate = Moment("2018-1-1");
-const amountOfImages = 366;
+const amountOfImages = 138;
 const autoplayTimeout = 100;
 
 const imageindex = [
@@ -71,7 +71,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="logo">
-            <img src="/images/logos/logo.png"></img> 
+            <img src="/images/logos/logo.png"></img>
         </div>
         <div className="slider">
           <Slider
