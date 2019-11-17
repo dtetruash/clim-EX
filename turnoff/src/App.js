@@ -9,8 +9,8 @@ const autoplayTimeout = 50;
 
 const imageindex = [
     {prefix: "tempplots/temp", blendmode: "normal"},
-    {image: "/images/heightmap-akatopo.png", blendmode: "normal"},
-    {prefix: "riverplots/river", blendmode: "screen", opacity: 0.8},
+    {image: "/images/heightmap-akatopo.png", blendmode: "normal", opacity: 0.4},
+    {prefix: "riverplots/river", blendmode: "screen", opacity: 0.5},
 ];
 
 class App extends React.Component {
