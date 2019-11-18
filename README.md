@@ -4,6 +4,8 @@
 
 Clim-EX (Climate Animation Explorer) is a tool for visualising and viewing meteorological data and weather forecasts which will help understanding African droughts. This tool bridges the gap between the layperson and scientific meteorological experts making the viewing of this data enjoyable and aesthetically pleasing.
 
+[//]: <https://davzzar.github.io/clim-AX/>
+
 ### Features
 
 Clim-EX is capable of displaying temperature and temperature anomaly, topography, precipitation, the flow of water and rivers across the surface and vegetation health. Each layer can be toggled according to the user's intent and wish.
