@@ -23,13 +23,13 @@ Clim-EX uses ERA5 Reanalysis Product data taken from the [Copernicus Data Store]
 - Stacks the layers via the SVG format to achieve hacky data layer blending
 - Auto interpolated between images for a smooth and pleasing viewing experience
 
-### Screenshots
+### Demo
 
-![Screenshot 1](https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/sc1.png)
+![Gif 1](https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/	clim-ex-1-op.gif)
 
-![Screenshot 2](https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/sc2.png)
+![Gif 2](https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-2-op.gif)
 
-![Screenshot 3](https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/sc3.png)
+![Gif 3](https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-3-op.gif)
 
 ### Team
 
