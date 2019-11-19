@@ -25,7 +25,7 @@ Clim-EX uses ERA5 Reanalysis Product data taken from the [Copernicus Data Store]
 
 ### Demo
 
-![Gif 1](https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/	clim-ex-1-op.gif)
+![Gif 1](https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-1-op.gif)
 
 ![Gif 2](https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-2-op.gif)
 
