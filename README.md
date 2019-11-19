@@ -1,8 +1,12 @@
 <p align="center">
-  <img src="https://github.com/davzzar/clim-AX/raw/master/turnoff/public/images/logos/readme-banner.png" alt="Clim-EX Logo Banner" width="738">
+  <img src="https://cdn.jsdelivr.net/gh/davzzar/clim-AX/turnoff/public/images/logos/readme-banner.png" alt="Clim-EX Logo Banner" width="738">
 </p>
 
 Clim-EX (Climate Animation Explorer) is a tool for visualising and viewing meteorological data and weather forecasts which will help understanding African droughts. This tool bridges the gap between the layperson and scientific meteorological experts making the viewing of this data enjoyable and aesthetically pleasing.
+
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-thumb.png" alt="Clim-EX Logo Banner" width="738">
+</p>
 
 [//]: <https://davzzar.github.io/clim-AX/>
 
