@@ -26,15 +26,15 @@ Clim-EX uses ERA5 Reanalysis Product data taken from the [Copernicus Data Store]
 ### Demo
 
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-1-op.gif" alt="Clim-EX Demo Gif 1" width="640" height="360">
+  <a href="https://thumbs.gfycat.com/LargeNaiveArgali-mobile.mp4"><img src="https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-1-op.gif" alt="Clim-EX Demo Gif 1" width="640" height="360"></a>
 </p>
 
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-2-op.gif" alt="Clim-EX Demo Gif 2" width="640" height="360">
+  <a href="https://thumbs.gfycat.com/SophisticatedOldfashionedFairyfly-mobile.mp4"><img src="https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-2-op.gif" alt="Clim-EX Demo Gif 2" width="640" height="360"></a>
 </p>
 
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-3-op.gif" alt="Clim-EX Demo Gif 3" width="640" height="360">
+  <a href="https://thumbs.gfycat.com/ElasticKaleidoscopicBellsnake-mobile.mp4"><img src="https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-3-op.gif" alt="Clim-EX Demo Gif 3" width="640" height="360"></a>
 </p>
 
 ### Team
