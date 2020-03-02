@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/davzzar/clim-AX/turnoff/public/images/logos/readme-banner.png" alt="Clim-EX Logo Banner" width="738">
+  <img src="https://cdn.jsdelivr.net/gh/davzzar/clim-EX/turnoff/public/images/logos/readme-banner.png" alt="Clim-EX Logo Banner" width="738">
 </p>
 
 Clim-EX (Climate Animation Explorer) is a tool for visualising and viewing meteorological data and weather forecasts which will help understanding African droughts. This tool bridges the gap between the layperson and scientific meteorological experts making the viewing of this data enjoyable and aesthetically pleasing.
 
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-thumb.png" alt="Clim-EX Logo Banner">
+  <img src="https://cdn.jsdelivr.net/gh/davzzar/clim-EX/screenshots/clim-ex-thumb.png" alt="Clim-EX Logo Banner">
 </p>
 
 [//]: <https://davzzar.github.io/clim-AX/>
@@ -30,15 +30,15 @@ Clim-EX uses ERA5 Reanalysis Product data taken from the [Copernicus Data Store]
 ### Demo
 
 <p align="center">
-  <a href="https://thumbs.gfycat.com/LargeNaiveArgali-mobile.mp4"><img src="https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-1-op.gif" alt="Clim-EX Demo Gif 1" width="640" height="360"></a>
+  <a href="https://thumbs.gfycat.com/LargeNaiveArgali-mobile.mp4"><img src="https://cdn.jsdelivr.net/gh/davzzar/clim-EX/screenshots/clim-ex-1-op.gif" alt="Clim-EX Demo Gif 1" width="640" height="360"></a>
 </p>
 
 <p align="center">
-  <a href="https://thumbs.gfycat.com/SophisticatedOldfashionedFairyfly-mobile.mp4"><img src="https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-2-op.gif" alt="Clim-EX Demo Gif 2" width="640" height="360"></a>
+  <a href="https://thumbs.gfycat.com/SophisticatedOldfashionedFairyfly-mobile.mp4"><img src="https://cdn.jsdelivr.net/gh/davzzar/clim-EX/screenshots/clim-ex-2-op.gif" alt="Clim-EX Demo Gif 2" width="640" height="360"></a>
 </p>
 
 <p align="center">
-  <a href="https://thumbs.gfycat.com/ElasticKaleidoscopicBellsnake-mobile.mp4"><img src="https://cdn.jsdelivr.net/gh/davzzar/clim-AX/screenshots/clim-ex-3-op.gif" alt="Clim-EX Demo Gif 3" width="640" height="360"></a>
+  <a href="https://thumbs.gfycat.com/ElasticKaleidoscopicBellsnake-mobile.mp4"><img src="https://cdn.jsdelivr.net/gh/davzzar/clim-EX/screenshots/clim-ex-3-op.gif" alt="Clim-EX Demo Gif 3" width="640" height="360"></a>
 </p>
 
 ### Team
